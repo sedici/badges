@@ -7,10 +7,11 @@
  *
  *}
 <div class="badges">
-        <div class="badge1">
         {if $doi}
-            DOI: {$doi}
+        
+        <span class="__dimensions_badge_embed__" data-doi="{$doi}"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
         {/if}
-        </div>
+        
 </div>
 
