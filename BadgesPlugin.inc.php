@@ -61,12 +61,13 @@ class BadgesPlugin extends GenericPlugin {
 		$output =& $params[2];
 
         $article = $smarty->get_template_vars('article');
-        $doi = $article->getBestArticleId();
+		if ($article->getStoredPubId('doi'))
+			$doi = $article->getStoredPubId('doi');
 
 		$smarty->assign('doi', $doi);
 
 		$badgesShowDimensions = $this->getSetting($context->getId(), 'badgesShowDimensions');
-		$badgesShowAltmetric = $this->getSetting($context->getId(), 'badgesShowDimensions');
+		$badgesShowAltmetric = $this->getSetting($context->getId(), 'badgesShowAltmetric');
 		$badgesShowPlumx = $this->getSetting($context->getId(), 'badgesShowPlumx');
 
 		if ($badgesShowDimensions == "on")
