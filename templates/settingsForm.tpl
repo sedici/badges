@@ -29,7 +29,7 @@
 			{fbvElement type="checkbox" id="badgesShowDimensions" label="plugins.generic.badges.manager.settings.showDimensions" checked=$badgesShowDimensions|compare:true}
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
-			{fbvElement type="checkbox" id="badgesShowAltmetrics" label="plugins.generic.badges.manager.settings.showAltmetrics" checked=$badgesShowAltmetrics|compare:true}
+			{fbvElement type="checkbox" id="badgesShowAltmetric" label="plugins.generic.badges.manager.settings.showAltmetric" checked=$badgesShowAltmetric|compare:true}
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="badgesShowPlumx" label="plugins.generic.badges.manager.settings.showPlumx" checked=$badgesShowPlumx|compare:true}
