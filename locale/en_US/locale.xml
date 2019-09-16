@@ -14,4 +14,10 @@
 <locale name="en_US" full_name="U.S. English">
   <message key="plugins.generic.badges.displayName">Altmetrics' Badges Plugin</message>
   <message key="plugins.generic.badges.description">Add altmetric badges to article page.</message>
+  <message key="plugins.generic.badges.manager.settings.description">Badges plugin settings</message>
+  <message key="plugins.generic.badges.settings">Select which badge(s) to show</message>
+  <message key="plugins.generic.badges.manager.settings.showDimensions">Show Dimensions badge</message>
+  <message key="plugins.generic.badges.manager.settings.showAltmetric">Show Altmetric.com badge</message>
+  <message key="plugins.generic.badges.manager.settings.showPlumx">Show PlumX badge</message>
+  
 </locale>
