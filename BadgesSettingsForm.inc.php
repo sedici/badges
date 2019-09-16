@@ -72,8 +72,8 @@ class BadgesSettingsForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
-		$plugin =& $this->plugin;
-		$contextId = $this->contextId;
+		$plugin =& $this->_plugin;
+		$contextId = $this->_journalId;
 
 		$plugin->updateSetting($contextId, 'badgesShowDimensions', $this->getData('badgesShowDimensions'), 'integer');
 		$plugin->updateSetting($contextId, 'badgesShowAltmetric', $this->getData('badgesShowAltmetric'), 'integer');

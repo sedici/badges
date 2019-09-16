@@ -65,6 +65,10 @@ class BadgesPlugin extends GenericPlugin {
 
 		$smarty->assign('doi', $doi);
 
+		$badgesShowDimensions = $this->getSetting($context->getId(), 'badgesShowDimensions');
+		$badgesShowAltmetric = $this->getSetting($context->getId(), 'badgesShowDimensions');
+		$badgesShowPlumx = $this->getSetting($context->getId(), 'badgesShowPlumx');
+		
 		$output .= $smarty->fetch($this->getTemplateResource('badges.tpl'));
 		return false;		
 
