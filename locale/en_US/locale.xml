@@ -19,5 +19,4 @@
   <message key="plugins.generic.badges.manager.settings.showDimensions">Show Dimensions badge</message>
   <message key="plugins.generic.badges.manager.settings.showAltmetric">Show Altmetric.com badge</message>
   <message key="plugins.generic.badges.manager.settings.showPlumx">Show PlumX badge</message>
-  
 </locale>

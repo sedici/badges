@@ -15,7 +15,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-class GoogleAnalyticsSettingsForm extends Form {
+class BadgesSettingsForm extends Form {
 
 	/** @var int */
 	var $_journalId;
@@ -32,7 +32,7 @@ class GoogleAnalyticsSettingsForm extends Form {
 		$this->_journalId = $journalId;
 		$this->_plugin = $plugin;
 
-		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
@@ -62,7 +62,7 @@ class GoogleAnalyticsSettingsForm extends Form {
 	 * Fetch the form.
 	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request,$template = NULL, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pluginName', $this->_plugin->getName());
 		return parent::fetch($request);
@@ -79,4 +79,7 @@ class GoogleAnalyticsSettingsForm extends Form {
 		$plugin->updateSetting($contextId, 'badgesShowAltmetrics', $this->getData('badgesShowAltmetrics'), 'integer');
 		$plugin->updateSetting($contextId, 'badgesShowPlumx', $this->getData('badgesShowPlumx'), 'integer');
 	}
+
+
+
 }
