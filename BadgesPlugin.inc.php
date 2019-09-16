@@ -2,10 +2,13 @@
 
 /**
  * @file plugins/generic/badges/BadgesPlugin.inc.php
+ * 
+ * Copyright 2019 
+ * Portal de Revistas de la Universidad Nacional de La Plata
+ *  https://revistas.unlp.edu.ar 
+ *  https://sedici.unlp.edu.ar
  *
- * Copyright (c) 2014-2019 Simon Fraser University
- * Copyright (c) 2003-2019 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * @author gonetil
  *
  * @class badges
  * @ingroup plugins_generic_dates

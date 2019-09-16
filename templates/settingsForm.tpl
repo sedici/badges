@@ -1,9 +1,12 @@
 {**
  * plugins/generic/badges/settingsForm.tpl
  *
- * Copyright (c) 2019 PREBI-SEDICI Universidad Nacional de La Plata
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Copyright 2019 
+ * Portal de Revistas de la Universidad Nacional de La Plata
+ *  https://revistas.unlp.edu.ar 
+ *  https://sedici.unlp.edu.ar
  *
+ * @author gonetil *
  * Badges plugin settings
  *
  *}

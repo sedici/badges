@@ -1,10 +1,12 @@
 {**
  * plugins/generic/badges/templates/articleFooter.tpl
  *
- * Copyright (c) 2014-2019 Simon Fraser University
- * Copyright (c) 2003-2019 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Copyright 2019 
+ * Portal de Revistas de la Universidad Nacional de La Plata
+ *  https://revistas.unlp.edu.ar 
+ *  https://sedici.unlp.edu.ar
  *
+ * @author gonetil
  *}
 <div class="item badges">
         {if $doi}
