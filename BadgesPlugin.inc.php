@@ -71,12 +71,15 @@ class BadgesPlugin extends GenericPlugin {
 
 		$badgesShowDimensions = $this->getSetting($context->getId(), 'badgesShowDimensions');
 		$badgesShowAltmetric = $this->getSetting($context->getId(), 'badgesShowAltmetric');
+		$badgesAltmetricHideWhenEmpty = $this->getSetting($context->getId(), 'badgesAltmetricHideWhenEmpty');
 		$badgesShowPlumx = $this->getSetting($context->getId(), 'badgesShowPlumx');
 
 		if ($badgesShowDimensions == "on")
 			$smarty->assign("showDimensions","true");
-		if ($badgesShowAltmetric == "on")
+		if ($badgesShowAltmetric == "on") {
 			$smarty->assign("showAltmetric","true");
+			$smarty->assign("badgesAltmetricHideWhenEmpty",  ($badgesAltmetricHideWhenEmpty == "on")? "true" : "false");
+		}
 		if ($badgesShowPlumx == "on")
 			$smarty->assign("showPlumx","true");	
 		$output .= $smarty->fetch($this->getTemplateResource('badges.tpl'));

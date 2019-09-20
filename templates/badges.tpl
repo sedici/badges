@@ -21,7 +21,7 @@
             {if $showAltmetric}
             <div class="sub_item">
                 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-                <div data-badge-popover="right" data-badge-type="donut" data-doi="{$doi}" data-hide-no-mentions="false" class="altmetric-embed"></div>
+                <div data-badge-popover="right" data-badge-type="donut" data-doi="{$doi}" data-hide-no-mentions="{$badgesAltmetricHideWhenEmpty}" class="altmetric-embed"></div>
             </div>
             {/if}
 

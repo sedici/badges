@@ -33,6 +33,8 @@
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="badgesShowAltmetric" label="plugins.generic.badges.manager.settings.showAltmetric" checked=$badgesShowAltmetric|compare:true}
+			{fbvElement type="checkbox" id="badgesAltmetricHideWhenEmpty" label="plugins.generic.badges.manager.settings.altmetricHideWhenEmpty" checked=$badgesAltmetricHideWhenEmpty|compare:true}
+			
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="badgesShowPlumx" label="plugins.generic.badges.manager.settings.showPlumx" checked=$badgesShowPlumx|compare:true}

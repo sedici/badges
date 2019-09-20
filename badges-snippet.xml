@@ -1,0 +1,33 @@
+<plugin category="generic" product="badges">
+  <name locale="en_US">Badges</name>
+  <homepage>https://github.com/sedici/badges/</homepage>
+
+  <summary locale="en_US">Includes badges for Dimensions, Altmetric and PlumX into articles' pages.</summary>
+
+  <description locale="en_US"><![CDATA[<p>
+  This plugins allow journal manager to display altmetrics and citations statistics in each article page. To do so, it embeds badges for three of the best known altmetrics and metrics services: Altmentric.com, Plum Analytics and Dimension.ai.<br/>
+  Journal managers can select which badge or badges use.  For instance, <a href="https://revistas.unlp.edu.ar/raab/article/view/2632">this journal</a> includes both Dimensions and PlumX badges, while <a href="https://revistas.unlp.edu.ar/revpsi/article/view/6103"> this journal </a> includes Dimensions and Almetric badges.
+  Important note: articles must have a DOI assigned for this to work. If DOI is not found, no badges are displayed (even if the plugin is enabled and configured).
+  </p>
+  ]]></description>
+
+  <maintainer>
+    <name>Gonzalo L. Villarreal</name>
+    <institution>PREBI-SEDICI (Universidad Nacional de La Plata) and CESGI (Comisión de Investigaciones Científicas)</institution>
+    <email>gonzalo@prebi.unlp.edu.ar</email>
+  </maintainer>
+
+  <release date="2019-09-19" version="1.0.0.0" md5="08c9be9bfde4d8ced64548e8d60a0a5415bddbdf">
+    <package>https://github.com/sedici/badges/archive/v1.0.0.0.tar.gz</package>
+
+    <compatibility application="ojs2">
+        <version>3.1.2.1</version>
+    </compatibility>
+
+    <!-- PKP will assign the certification type -->
+    <certification type=""/>
+
+    <description>First version of the plugin. Allow managers to choose which badge or badges include. Options available: Dimensions, Altmetric and PlumX.</description>
+  </release>
+
+</plugin>

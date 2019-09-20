@@ -22,4 +22,6 @@
   <message key="plugins.generic.badges.manager.settings.showDimensions">Mostrar badge de Dimensions</message>
   <message key="plugins.generic.badges.manager.settings.showAltmetric">Mostrar badge de Altmetric.com</message>
   <message key="plugins.generic.badges.manager.settings.showPlumx">Mostrar badge de PlumX</message>
+  <message key="plugins.generic.badges.manager.settings.altmetricHideWhenEmpty">Ocultar el badge de Altmetric.com si no hay métricas</message>
+  
 </locale>

@@ -46,7 +46,9 @@ class BadgesSettingsForm extends Form {
 		$this->_data = array(
             'badgesShowDimensions' => $this->_plugin->getSetting($this->_journalId, 'badgesShowDimensions'),
             'badgesShowAltmetric' => $this->_plugin->getSetting($this->_journalId, 'badgesShowAltmetric'),
-            'badgesShowPlumx' => $this->_plugin->getSetting($this->_journalId, 'badgesShowPlumx'),
+			'badgesShowPlumx' => $this->_plugin->getSetting($this->_journalId, 'badgesShowPlumx'),
+			'badgesAltmetricHideWhenEmpty' => $this->_plugin->getSetting($this->_journalId, 'badgesAltmetricHideWhenEmpty'),
+			
 		);
     }
 
@@ -56,8 +58,9 @@ class BadgesSettingsForm extends Form {
 	function readInputData() {
         $this->readUserVars(array('badgesShowDimensions'));
         $this->readUserVars(array('badgesShowAltmetric'));
-        $this->readUserVars(array('badgesShowPlumx'));
-
+		$this->readUserVars(array('badgesShowPlumx'));
+		$this->readUserVars(array('badgesAltmetricHideWhenEmpty'));
+	
     }
     
     /**
@@ -80,6 +83,8 @@ class BadgesSettingsForm extends Form {
 		$plugin->updateSetting($contextId, 'badgesShowDimensions', $this->getData('badgesShowDimensions'), 'integer');
 		$plugin->updateSetting($contextId, 'badgesShowAltmetric', $this->getData('badgesShowAltmetric'), 'integer');
 		$plugin->updateSetting($contextId, 'badgesShowPlumx', $this->getData('badgesShowPlumx'), 'integer');
+		$plugin->updateSetting($contextId, 'badgesAltmetricHideWhenEmpty', $this->getData('badgesShowPlumx'), 'badgesAltmetricHideWhenEmpty');
+		
 	}
 
 
