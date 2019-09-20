@@ -1,5 +1,6 @@
 <plugin category="generic" product="badges">
   <name locale="en_US">Badges</name>
+  <name locale="es_ES">Badges</name>
   <homepage>https://github.com/sedici/badges/</homepage>
 
   <summary locale="en_US">Includes badges for Dimensions, Altmetric and PlumX into articles' pages.</summary>
@@ -11,23 +12,32 @@
   </p>
   ]]></description>
 
+  <description locale="es_ES"><![CDATA[<p>
+  Este plugin le permite a los gestores de revistas mostrar estadísticas sobre citas y altmetris en las páginas de los artículos. Para llo, embebe badges para algunos de los tres servicios de ametrics más conocidos: Altmentric.com, Plum Analytics and Dimension.ai.<br/>
+  Los gestores de revistas pueden elegir cuál o cuáles badges mostrar. Por ejemmplo, <a href="https://revistas.unlp.edu.ar/raab/article/view/2632">esta revista</a> 
+  incluye los badges de Dimensions y de PlumX, mientras que <a href="https://revistas.unlp.edu.ar/revpsi/article/view/6103"> esta revista </a> 
+  incluye los de Dimensions y Almetric.
+  Nota importante: para que los badges se muestren, los artículos deben poseer un DOI.
+  </p>
+  ]]></description>
+
   <maintainer>
     <name>Gonzalo L. Villarreal</name>
     <institution>PREBI-SEDICI (Universidad Nacional de La Plata) and CESGI (Comisión de Investigaciones Científicas)</institution>
     <email>gonzalo@prebi.unlp.edu.ar</email>
   </maintainer>
 
-  <release date="2019-09-19" version="1.0.0.0" md5="08c9be9bfde4d8ced64548e8d60a0a5415bddbdf">
-    <package>https://github.com/sedici/badges/archive/v1.0.0.0.tar.gz</package>
+  <release date="2019-09-20" version="1.0.1.0" md5="27a6a6cdc0c0fa6894f242199b7e1acf86cf0e46">
+    <package>https://github.com/sedici/badges/archive/v1.0.1.0.tar.gz</package>
 
-    <compatibility application="ojs2">
+    <compatibility application="ojs">
         <version>3.1.2.1</version>
     </compatibility>
 
     <!-- PKP will assign the certification type -->
     <certification type=""/>
 
-    <description>First version of the plugin. Allow managers to choose which badge or badges include. Options available: Dimensions, Altmetric and PlumX.</description>
+    <description>Allow managers to choose which badge or badges include. Options available: Dimensions, Altmetric and PlumX. Almetric badge can be hidden if there are no metrics to show.</description>
   </release>
 
 </plugin>
