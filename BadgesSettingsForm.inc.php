@@ -83,7 +83,7 @@ class BadgesSettingsForm extends Form {
 		$plugin->updateSetting($contextId, 'badgesShowDimensions', $this->getData('badgesShowDimensions'), 'integer');
 		$plugin->updateSetting($contextId, 'badgesShowAltmetric', $this->getData('badgesShowAltmetric'), 'integer');
 		$plugin->updateSetting($contextId, 'badgesShowPlumx', $this->getData('badgesShowPlumx'), 'integer');
-		$plugin->updateSetting($contextId, 'badgesAltmetricHideWhenEmpty', $this->getData('badgesShowPlumx'), 'badgesAltmetricHideWhenEmpty');
+		$plugin->updateSetting($contextId, 'badgesAltmetricHideWhenEmpty', $this->getData('badgesAltmetricHideWhenEmpty'), 'badgesAltmetricHideWhenEmpty');
 		
 	}
 

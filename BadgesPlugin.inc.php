@@ -78,7 +78,7 @@ class BadgesPlugin extends GenericPlugin {
 			$smarty->assign("showDimensions","true");
 		if ($badgesShowAltmetric == "on") {
 			$smarty->assign("showAltmetric","true");
-			$smarty->assign("badgesAltmetricHideWhenEmpty",  ($badgesAltmetricHideWhenEmpty == "on")? "true" : "false");
+			$smarty->assign("badgesAltmetricHideWhenEmpty",  ( ($badgesAltmetricHideWhenEmpty == "on")? "true" : "false") );
 		}
 		if ($badgesShowPlumx == "on")
 			$smarty->assign("showPlumx","true");	
