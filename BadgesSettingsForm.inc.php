@@ -13,7 +13,7 @@
  * @ingroup plugins_generic_badges
  *
  * @brief Form for journal managers to modify Almetric Badges plugin options
- */
+ */ 
 
 import('lib.pkp.classes.form.Form');
 
@@ -76,15 +76,22 @@ class BadgesSettingsForm extends Form {
    	/**
 	 * Save settings.
 	 */
-	function execute() {
+		/**
+	 * @copydoc Form::execute()
+	 */
+
+
+	function execute(...$functionArgs) {
 		$plugin =& $this->_plugin;
 		$contextId = $this->_journalId;
 
-		$plugin->updateSetting($contextId, 'badgesShowDimensions', $this->getData('badgesShowDimensions'), 'integer');
-		$plugin->updateSetting($contextId, 'badgesShowAltmetric', $this->getData('badgesShowAltmetric'), 'integer');
-		$plugin->updateSetting($contextId, 'badgesShowPlumx', $this->getData('badgesShowPlumx'), 'integer');
-		$plugin->updateSetting($contextId, 'badgesAltmetricHideWhenEmpty', $this->getData('badgesAltmetricHideWhenEmpty'), 'badgesAltmetricHideWhenEmpty');
+		$plugin->updateSetting($contextId, 'badgesShowDimensions', $this->getData('badgesShowDimensions'), 'string');
+		$plugin->updateSetting($contextId, 'badgesShowAltmetric', $this->getData('badgesShowAltmetric'), 'string');
+		$plugin->updateSetting($contextId, 'badgesShowPlumx', $this->getData('badgesShowPlumx'), 'string');
+		$plugin->updateSetting($contextId, 'badgesAltmetricHideWhenEmpty', $this->getData('badgesAltmetricHideWhenEmpty'), 'string');
 		
+		parent::execute(...$functionArgs);
+
 	}
 
 
