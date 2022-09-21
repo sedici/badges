@@ -52,7 +52,7 @@ class BadgesSettingsForm extends Form {
 		);
     }
 
-    	/**
+    /**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
@@ -73,7 +73,7 @@ class BadgesSettingsForm extends Form {
 		return parent::fetch($request);
     }
     
-   	/**
+    /**
 	 * Save settings.
 	 */
 		/**
