@@ -25,12 +25,13 @@ class BadgesPlugin extends GenericPlugin {
 	 * @return boolean True iff plugin initialized successfully; if false,
 	 * 	the plugin will not be registered.
 	 */
-	function register($category, $path, $mainContextId = NUL) {
+	function register($category, $path, $mainContextId = NULL) {
 		$success = parent::register($category, $path);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
 			// Insert Badges div
 			HookRegistry::register('Templates::Article::Details', array($this, 'addBadges'));
+			HookRegistry::register('Templates::Preprint::Details', array($this, 'addBadges'));
 		}
 		return $success;
 	}
@@ -51,8 +52,22 @@ class BadgesPlugin extends GenericPlugin {
 		return __('plugins.generic.badges.description');
 	}
 
+	private function getPubId($smarty) {
+		$application = Application::getName();
+		switch($application){
+			case 'ojs2':
+				$submission = $smarty->getTemplateVars('article');
+				break;
+			case 'ops':
+				$submission = $smarty->getTemplateVars('preprint');
+				break;
+		}
+
+		return $submission->getStoredPubId('doi');
+	}
+
 	/**
-	 * Add badges to article landing page
+	 * Add badges to article/preprint landing page
 	 * @param $hookName string
 	 * @param $params array
 	 */
@@ -63,10 +78,7 @@ class BadgesPlugin extends GenericPlugin {
 		$smarty =& $params[1];
 		$output =& $params[2];
 
-        $article = $smarty->get_template_vars('article');
-		if ($article->getStoredPubId('doi'))
-			$doi = $article->getStoredPubId('doi');
-
+		$doi = $this->getPubId($smarty);
 		$smarty->assign('doi', $doi);
 
 		$badgesShowDimensions = $this->getSetting($context->getId(), 'badgesShowDimensions');
@@ -110,7 +122,7 @@ class BadgesPlugin extends GenericPlugin {
     }
     
 
-     /**
+    /**
 	 * @copydoc Plugin::manage()
 	 */
 	function manage($args, $request) {

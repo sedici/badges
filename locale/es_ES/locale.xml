@@ -23,5 +23,5 @@
   <message key="plugins.generic.badges.manager.settings.showAltmetric">Mostrar badge de Altmetric.com</message>
   <message key="plugins.generic.badges.manager.settings.showPlumx">Mostrar badge de PlumX</message>
   <message key="plugins.generic.badges.manager.settings.altmetricHideWhenEmpty">Ocultar el badge de Altmetric.com si no hay métricas</message>
-  
+  <message key="plugins.generic.badges.manager.settings.showBlockTitle">Métrica</message>
 </locale>
