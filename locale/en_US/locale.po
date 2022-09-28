@@ -14,22 +14,28 @@ msgstr ""
 "X-Generator: Poedit 2.3\n"
 
 msgid "plugins.generic.badges.displayName"
-msgstr "Módulo de Badges de Altmetrics"
+msgstr "Altmetrics Badges Plugin"
+
+msgid "plugins.generic.badges.description"
+msgstr "Adds altmetric badges to article page."
 
 msgid "plugins.generic.badges.manager.settings.description"
-msgstr "Permite mostrar los sellos (badges) con altmetrics de Dimensions, Altmetric.com y PlumX Analytics"
+msgstr "Badges plugin settings"
 
 msgid "plugins.generic.badges.settings"
-msgstr "Ajustes"
+msgstr "Select which badge(s) to show"
 
 msgid "plugins.generic.badges.manager.settings.showDimensions"
-msgstr "Mostrar el badge de Dimensions"
+msgstr "Show Dimensions badge"
 
 msgid "plugins.generic.badges.manager.settings.showAltmetric"
-msgstr "Mostrar el badge de Altmetric"
+msgstr "Show Altmetric.com badge"
 
 msgid "plugins.generic.badges.manager.settings.altmetricHideWhenEmpty"
-msgstr "Ocultar el badge de Altmetric si no hay datos para mostrar"
+msgstr "Hide altmetric badge when there are no mentions"
 
 msgid "plugins.generic.badges.manager.settings.showPlumx"
-msgstr "Mostrar el badge de PlumX Analytics"
+msgstr "Show PlumX badge"
+
+msgid "plugins.generic.badges.manager.settings.showBlockTitle"
+msgstr "Metrics"

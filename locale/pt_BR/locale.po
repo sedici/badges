@@ -16,6 +16,9 @@ msgstr ""
 msgid "plugins.generic.badges.displayName"
 msgstr "Plugin de marcas de altmetrics (Badges)"
 
+msgid "plugins.generic.badges.description"
+msgstr "Incorpora marcas com altmétricas na página de artigos"
+
 msgid "plugins.generic.badges.manager.settings.description"
 msgstr "Incorpora marcas com altmétricas na página de artigos"
 
@@ -33,3 +36,6 @@ msgstr "Oculte badge de Altmetric.com se não houver métricas"
 
 msgid "plugins.generic.badges.manager.settings.showPlumx"
 msgstr "Mostrar badge PlumX"
+
+msgid "plugins.generic.badges.manager.settings.showBlockTitle"
+msgstr "Métricas"
