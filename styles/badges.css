@@ -1,0 +1,20 @@
+.__dimensions_badge_embed__, 
+.altmetric-embed,
+.plx-print {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.PlumX-Popup .ppp-container.ppp-large > a,
+.PlumX-Popup .ppp-container.ppp-large .plx-print {
+  display: block;
+  width: 6.875rem;
+  height: 6.875rem;
+  margin-top: -1rem;
+  margin-left: -1.75rem;
+}
+
+
