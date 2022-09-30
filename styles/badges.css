@@ -1,11 +1,9 @@
-.__dimensions_badge_embed__, 
-.altmetric-embed,
-.plx-print {
-  width: 5rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: left;
+.obj_article_details .sub_item {
+  margin: 1.25rem 0;
+}
+
+.altmetric-embed > a > img {
+  width: 4rem;
 }
 
 .PlumX-Popup .ppp-container.ppp-large > a,
@@ -16,5 +14,3 @@
   margin-top: -1rem;
   margin-left: -1.75rem;
 }
-
-
