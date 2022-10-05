@@ -31,8 +31,14 @@ msgstr "Mostrar badge Dimensions.ai"
 msgid "plugins.generic.badges.manager.settings.showAltmetric"
 msgstr "Mostrar badge Altmetric.com"
 
+msgid "plugins.generic.badges.manager.settings.dimensionsHideWhenEmpty"
+msgstr "Oculte badge de Dimensions se não houver métricas"
+
 msgid "plugins.generic.badges.manager.settings.altmetricHideWhenEmpty"
 msgstr "Oculte badge de Altmetric.com se não houver métricas"
+
+msgid "plugins.generic.badges.manager.settings.plumxHideWhenEmpty"
+msgstr "Oculte badge de PlumX se não houver métricas"
 
 msgid "plugins.generic.badges.manager.settings.showPlumx"
 msgstr "Mostrar badge PlumX"
