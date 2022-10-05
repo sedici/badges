@@ -82,18 +82,24 @@ class BadgesPlugin extends GenericPlugin {
 		$smarty->assign('doi', $doi);
 
 		$badgesShowDimensions = $this->getSetting($context->getId(), 'badgesShowDimensions');
+		$badgesDimensionsHideWhenEmpty = $this->getSetting($context->getId(), 'badgesDimensionsHideWhenEmpty');
 		$badgesShowAltmetric = $this->getSetting($context->getId(), 'badgesShowAltmetric');
 		$badgesAltmetricHideWhenEmpty = $this->getSetting($context->getId(), 'badgesAltmetricHideWhenEmpty');
 		$badgesShowPlumx = $this->getSetting($context->getId(), 'badgesShowPlumx');
+		$badgesPlumxHideWhenEmpty = $this->getSetting($context->getId(), 'badgesPlumxHideWhenEmpty');
 
-		if ($badgesShowDimensions == "on")
-			$smarty->assign("showDimensions","true");
+		if ($badgesShowDimensions == "on") {
+			$smarty->assign("showDimensions", "true");
+			$smarty->assign("badgesDimensionsHideWhenEmpty",  ( ($badgesDimensionsHideWhenEmpty == "on")? "true" : "false") );
+		}
 		if ($badgesShowAltmetric == "on") {
 			$smarty->assign("showAltmetric","true");
 			$smarty->assign("badgesAltmetricHideWhenEmpty",  ( ($badgesAltmetricHideWhenEmpty == "on")? "true" : "false") );
 		}
-		if ($badgesShowPlumx == "on")
-			$smarty->assign("showPlumx","true");	
+		if ($badgesShowPlumx == "on") {
+			$smarty->assign("showPlumx", "true");
+			$smarty->assign("badgesPlumxHideWhenEmpty",  ( ($badgesPlumxHideWhenEmpty == "on")? "true" : "false") );
+		}
 		$output .= $smarty->fetch($this->getTemplateResource('badges.tpl'));
 		return false;		
 
