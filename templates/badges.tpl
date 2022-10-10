@@ -34,4 +34,17 @@
         </div>   
         {/if}
     </div>
+
+    <script>
+        $(document).ready(function() {ldelim}
+            let dimensionsBadge = document.getElementsByClassName('__dimensions_badge_embed__')[0];
+            let altmetricBadge = document.getElementsByClassName('altmetric-embed')[0];
+            let plumxBadge = document.getElementsByClassName('plumx-plum-print-popup')[0];
+
+            if(!dimensionsBadge.hasChildNodes() && !altmetricBadge.hasChildNodes() && !plumxBadge.hasChildNodes()) {ldelim}
+                let badgesDiv = document.getElementsByClassName('badges')[0];
+                badgesDiv.style.display = 'none';
+            {rdelim}
+        {rdelim});
+    </script>
 {/if}
