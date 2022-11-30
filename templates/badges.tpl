@@ -11,7 +11,7 @@
 
 {if $doi}
     <link rel="stylesheet" type="text/css" href="/plugins/generic/badges/styles/badges.css">
-    <div class="item badges">
+    <div class="item badges" style="display: none">
         <h2 class="label">{translate key="plugins.generic.badges.manager.settings.showBlockTitle"}</h2>
 
         {if $showDimensions}        
@@ -41,9 +41,9 @@
             let altmetricBadge = document.getElementsByClassName('altmetric-embed')[0];
             let plumxBadge = document.getElementsByClassName('plumx-plum-print-popup')[0];
 
-            if(!dimensionsBadge.hasChildNodes() && !altmetricBadge.hasChildNodes() && !plumxBadge.hasChildNodes()) {ldelim}
+            if(dimensionsBadge.hasChildNodes() || altmetricBadge.hasChildNodes() || plumxBadge.hasChildNodes()) {ldelim}
                 let badgesDiv = document.getElementsByClassName('badges')[0];
-                badgesDiv.style.display = 'none';
+                badgesDiv.style.display = 'block';
             {rdelim}
         {rdelim});
     </script>
