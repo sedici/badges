@@ -15,24 +15,37 @@
  * @brief Form for journal managers to modify Almetric Badges plugin options
  */ 
 
-import('lib.pkp.classes.form.Form');
+namespace APP\plugins\generic\badges;
+
+use PKP\form\Form;
+use APP\template\TemplateManager;
+use PKP\form\validation\FormValidatorPost;
+use PKP\form\validation\FormValidatorCSRF;
 
 class BadgesSettingsForm extends Form {
+	public const CONFIG_VARS = [
+		'badgesShowDimensions' => 'string',
+		'badgesShowAltmetric' => 'string',
+		'badgesShowPlumx' => 'string',
+		'badgesDimensionsHideWhenEmpty' => 'string',
+		'badgesAltmetricHideWhenEmpty' => 'string',
+		'badgesPlumxHideWhenEmpty' => 'string'
+	];
 
 	/** @var int */
-	var $_journalId;
+	var $contextId;
 
 	/** @var object */
-	var $_plugin;
+	var $plugin;
 
 	/**
 	 * Constructor
 	 * @param $plugin BadgesPlugin
-	 * @param $journalId int
+	 * @param $contextId int
 	 */
-	function __construct($plugin, $journalId) {
-		$this->_journalId = $journalId;
-		$this->_plugin = $plugin;
+	function __construct($plugin, $contextId) {
+		$this->contextId = $contextId;
+		$this->plugin = $plugin;
 
 		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
@@ -43,27 +56,17 @@ class BadgesSettingsForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		$this->_data = array(
-            'badgesShowDimensions' => $this->_plugin->getSetting($this->_journalId, 'badgesShowDimensions'),
-            'badgesShowAltmetric' => $this->_plugin->getSetting($this->_journalId, 'badgesShowAltmetric'),
-			'badgesShowPlumx' => $this->_plugin->getSetting($this->_journalId, 'badgesShowPlumx'),
-			'badgesDimensionsHideWhenEmpty' => $this->_plugin->getSetting($this->_journalId, 'badgesDimensionsHideWhenEmpty'),
-			'badgesAltmetricHideWhenEmpty' => $this->_plugin->getSetting($this->_journalId, 'badgesAltmetricHideWhenEmpty'),
-			'badgesPlumxHideWhenEmpty' => $this->_plugin->getSetting($this->_journalId, 'badgesPlumxHideWhenEmpty'),
-			
-		);
+		$this->_data = [];
+		foreach (self::CONFIG_VARS as $configVar => $type) {
+            $this->_data[$configVar] = $this->plugin->getSetting($this->contextId, $configVar);
+        }
     }
 
     /**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-        $this->readUserVars(array('badgesShowDimensions'));
-        $this->readUserVars(array('badgesShowAltmetric'));
-		$this->readUserVars(array('badgesShowPlumx'));
-		$this->readUserVars(array('badgesDimensionsHideWhenEmpty'));
-		$this->readUserVars(array('badgesAltmetricHideWhenEmpty'));
-		$this->readUserVars(array('badgesPlumxHideWhenEmpty'));
+        $this->readUserVars(array_keys(self::CONFIG_VARS));
     }
     
     /**
@@ -85,20 +88,13 @@ class BadgesSettingsForm extends Form {
 
 
 	function execute(...$functionArgs) {
-		$plugin =& $this->_plugin;
-		$contextId = $this->_journalId;
+		$plugin = &$this->plugin;
+		$contextId = $this->contextId;
 
-		$plugin->updateSetting($contextId, 'badgesShowDimensions', $this->getData('badgesShowDimensions'), 'string');
-		$plugin->updateSetting($contextId, 'badgesShowAltmetric', $this->getData('badgesShowAltmetric'), 'string');
-		$plugin->updateSetting($contextId, 'badgesShowPlumx', $this->getData('badgesShowPlumx'), 'string');
-		$plugin->updateSetting($contextId, 'badgesDimensionsHideWhenEmpty', $this->getData('badgesDimensionsHideWhenEmpty'), 'string');
-		$plugin->updateSetting($contextId, 'badgesAltmetricHideWhenEmpty', $this->getData('badgesAltmetricHideWhenEmpty'), 'string');
-		$plugin->updateSetting($contextId, 'badgesPlumxHideWhenEmpty', $this->getData('badgesPlumxHideWhenEmpty'), 'string');
-		
+		foreach (self::CONFIG_VARS as $configVar => $type) {
+			$plugin->updateSetting($contextId, $configVar, $this->getData($configVar), $type);
+		}
+
 		parent::execute(...$functionArgs);
-
 	}
-
-
-
 }
