@@ -1,18 +1,18 @@
 <plugin category="generic" product="badges">
-  <name locale="en_US">Badges</name>
-  <name locale="es_ES">Badges</name>
+  <name locale="en">Badges</name>
+  <name locale="es">Badges</name>
   <homepage>https://github.com/sedici/badges/</homepage>
 
-  <summary locale="en_US">Includes badges for Dimensions, Altmetric and PlumX into articles' pages.</summary>
+  <summary locale="en">Includes badges for Dimensions, Altmetric and PlumX into articles' pages.</summary>
 
-  <description locale="en_US"><![CDATA[<p>
+  <description locale="en"><![CDATA[<p>
   This plugins allow journal manager to display altmetrics and citations statistics in each article page. To do so, it embeds badges for three of the best known altmetrics and metrics services: Altmentric.com, Plum Analytics and Dimension.ai.<br/>
   Journal managers can select which badge or badges use.  For instance, <a href="https://revistas.unlp.edu.ar/raab/article/view/2632">this journal</a> includes both Dimensions and PlumX badges, while <a href="https://revistas.unlp.edu.ar/revpsi/article/view/6103"> this journal </a> includes Dimensions and Almetric badges.
   Important note: articles must have a DOI assigned for this to work. If DOI is not found, no badges are displayed (even if the plugin is enabled and configured).
   </p>
   ]]></description>
 
-  <description locale="es_ES"><![CDATA[<p>
+  <description locale="es"><![CDATA[<p>
   Este plugin le permite a los gestores de revistas mostrar estadísticas sobre citas y altmetris en las páginas de los artículos. Para llo, embebe badges para algunos de los tres servicios de ametrics más conocidos: Altmentric.com, Plum Analytics and Dimension.ai.<br/>
   Los gestores de revistas pueden elegir cuál o cuáles badges mostrar. Por ejemmplo, <a href="https://revistas.unlp.edu.ar/raab/article/view/2632">esta revista</a> 
   incluye los badges de Dimensions y de PlumX, mientras que <a href="https://revistas.unlp.edu.ar/revpsi/article/view/6103"> esta revista </a> 

@@ -30,14 +30,17 @@
 
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="badgesShowDimensions" label="plugins.generic.badges.manager.settings.showDimensions" checked=$badgesShowDimensions|compare:true}
+			{fbvElement type="checkbox" id="badgesDimensionsHideWhenEmpty" label="plugins.generic.badges.manager.settings.dimensionsHideWhenEmpty" checked=$badgesDimensionsHideWhenEmpty|compare:true}
 		{/fbvFormSection}
+		
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="badgesShowAltmetric" label="plugins.generic.badges.manager.settings.showAltmetric" checked=$badgesShowAltmetric|compare:true}
 			{fbvElement type="checkbox" id="badgesAltmetricHideWhenEmpty" label="plugins.generic.badges.manager.settings.altmetricHideWhenEmpty" checked=$badgesAltmetricHideWhenEmpty|compare:true}
-			
 		{/fbvFormSection}
+		
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="badgesShowPlumx" label="plugins.generic.badges.manager.settings.showPlumx" checked=$badgesShowPlumx|compare:true}
+			{fbvElement type="checkbox" id="badgesPlumxHideWhenEmpty" label="plugins.generic.badges.manager.settings.plumxHideWhenEmpty" checked=$badgesPlumxHideWhenEmpty|compare:true}
 		{/fbvFormSection}
 
 	{/fbvFormArea}
