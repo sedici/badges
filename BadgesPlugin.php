@@ -16,7 +16,16 @@
  * @brief badges plugin class
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+namespace APP\plugins\generic\badges;
+
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
+use APP\core\Application;
+use APP\template\TemplateManager;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\core\JSONMessage;
+use APP\plugins\generic\badges\BadgesSettingsForm;
 
 class BadgesPlugin extends GenericPlugin {
 	/**
@@ -26,12 +35,14 @@ class BadgesPlugin extends GenericPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path, $mainContextId = NULL) {
-		$success = parent::register($category, $path);
-		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
-		if ($success && $this->getEnabled()) {
+		$success = parent::register($category, $path, $mainContextId);
+		if (Application::isUnderMaintenance()) {
+            return $success;
+        }
+		if ($success && $this->getEnabled($mainContextId)) {
 			// Insert Badges div
-			HookRegistry::register('Templates::Article::Details', array($this, 'addBadges'));
-			HookRegistry::register('Templates::Preprint::Details', array($this, 'addBadges'));
+			Hook::add('Templates::Article::Details', [$this, 'addBadges']);
+			Hook::add('Templates::Preprint::Details', [$this, 'addBadges']);
 		}
 		return $success;
 	}
@@ -52,18 +63,14 @@ class BadgesPlugin extends GenericPlugin {
 		return __('plugins.generic.badges.description');
 	}
 
-	private function getPubId($smarty) {
+	private function getDoi($smarty) {
 		$application = Application::getName();
-		switch($application){
-			case 'ojs2':
-				$submission = $smarty->getTemplateVars('article');
-				break;
-			case 'ops':
-				$submission = $smarty->getTemplateVars('preprint');
-				break;
-		}
+		$mapAppToVarName = ['ojs2' => 'article', 'ops' => 'preprint'];
+		
+		$submission = $smarty->getTemplateVars($mapAppToVarName[$application]);
+		$publication = $submission->getCurrentPublication();
 
-		return $submission->getStoredPubId('doi');
+		return $publication->getDoi();
 	}
 
 	/**
@@ -78,7 +85,7 @@ class BadgesPlugin extends GenericPlugin {
 		$smarty =& $params[1];
 		$output =& $params[2];
 
-		$doi = $this->getPubId($smarty);
+		$doi = $this->getDoi($smarty);
 		$smarty->assign('doi', $doi);
 
 		$badgesShowDimensions = $this->getSetting($context->getId(), 'badgesShowDimensions');
@@ -110,7 +117,6 @@ class BadgesPlugin extends GenericPlugin {
 	 */
 	function getActions($request, $verb) {
 		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		return array_merge(
 			$this->getEnabled()?array(
 				new LinkAction(
@@ -136,11 +142,9 @@ class BadgesPlugin extends GenericPlugin {
 			case 'settings':
 				$context = $request->getContext();
 
-				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$templateMgr->registerPlugin('function', 'plugin_url', array($this, 'smartyPluginUrl'));
 
-				$this->import('BadgesSettingsForm');
 				$form = new BadgesSettingsForm($this, $context->getId());
 
 				if ($request->getUserVar('save')) {
