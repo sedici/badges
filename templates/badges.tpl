@@ -36,7 +36,7 @@
     </div>
 
     <script>
-        $(window).on("load", function() {ldelim}
+        window.addEventListener("load", function() {ldelim}
             let dimensionsBadge = document.getElementsByClassName('__dimensions_badge_embed__')[0];
             let altmetricBadge = document.getElementsByClassName('altmetric-embed')[0];
             let plumxBadge = document.getElementsByClassName('plumx-plum-print-popup')[0];
