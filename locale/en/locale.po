@@ -43,5 +43,35 @@ msgstr "Hide PlumX badge when there are no mentions"
 msgid "plugins.generic.badges.manager.settings.showPlumx"
 msgstr "Show PlumX badge"
 
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyle"
+msgstr "Altmetric badge style"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeDefaultStyle"
+msgstr "Default"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeDonutStyle"
+msgstr "Donut"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeMediumDonutStyle"
+msgstr "Medium Donut"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeLargeDonutStyle"
+msgstr "Large Donut"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadge1Style"
+msgstr "1"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadge4Style"
+msgstr "4"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeBarStyle"
+msgstr "Bar"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeMediumBarStyle"
+msgstr "Medium Bar"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeLargeBarStyle"
+msgstr "Large Bar"
+
 msgid "plugins.generic.badges.manager.settings.showBlockTitle"
 msgstr "Metrics"
