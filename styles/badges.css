@@ -1,16 +1,20 @@
 .obj_article_details .sub_item {
-  margin: 1.25rem 0;
+    margin: 1.25rem 0;
 }
 
 .altmetric-embed > a > img {
-  width: 4rem;
+    width: 100%;
+}
+
+.altmetric-embed[data-badge-type="donut"] > a > img {
+    width: 50%;
 }
 
 .PlumX-Popup .ppp-container.ppp-large > a,
 .PlumX-Popup .ppp-container.ppp-large .plx-print {
-  display: block;
-  width: 6.875rem;
-  height: 6.875rem;
-  margin-top: -1rem;
-  margin-left: -1.75rem;
+    display: block;
+    width: 6.875rem;
+    height: 6.875rem;
+    margin-top: -1rem;
+    margin-left: -1.75rem;
 }
