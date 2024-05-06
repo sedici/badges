@@ -44,6 +44,7 @@
 		{/fbvFormSection}
 
         <h3>{translate key="plugins.generic.badges.manager.settings.altmetricBadgeStyle"}</h3>
+        <p>{translate key="plugins.generic.badges.manager.settings.altmetricBadgeStyleDetails"}</p>
 
         {fbvFormSection list=true}
             {fbvElement type="radio" value="default" id="badgesAltmetricStyle-default" name="badgesAltmetricStyle" checked=$badgesAltmetricStyle|compare:"default" label="plugins.generic.badges.manager.settings.altmetricBadgeDefaultStyle"}

@@ -46,6 +46,11 @@ msgstr "Show PlumX badge"
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyle"
 msgstr "Altmetric badge style"
 
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyleDetails"
+msgstr ""
+"See <a target=\"_new\" href=\"https://badge-docs.altmetric.com/"
+"customizations.html#badge-types\">Badge types</a> for details."
+
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeDefaultStyle"
 msgstr "Default"
 
@@ -53,10 +58,10 @@ msgid "plugins.generic.badges.manager.settings.altmetricBadgeDonutStyle"
 msgstr "Donut"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeMediumDonutStyle"
-msgstr "Medium Donut"
+msgstr "Medium donut"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeLargeDonutStyle"
-msgstr "Large Donut"
+msgstr "Large donut"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadge1Style"
 msgstr "1"
@@ -68,10 +73,10 @@ msgid "plugins.generic.badges.manager.settings.altmetricBadgeBarStyle"
 msgstr "Bar"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeMediumBarStyle"
-msgstr "Medium Bar"
+msgstr "Medium bar"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeLargeBarStyle"
-msgstr "Large Bar"
+msgstr "Large bar"
 
 msgid "plugins.generic.badges.manager.settings.showBlockTitle"
 msgstr "Metrics"

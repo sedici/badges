@@ -43,5 +43,40 @@ msgstr "Ocultar el badge de PlumX si no hay datos para mostrar"
 msgid "plugins.generic.badges.manager.settings.showPlumx"
 msgstr "Mostrar el badge de PlumX Analytics"
 
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyle"
+msgstr "Estilo de badge Altmetric"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyleDetails"
+msgstr ""
+"Véase <a target=\"_new\" href=\"https://badge-docs.altmetric.com/"
+"customizations.html#badge-types\">Badge types</a> para detalles."
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeDefaultStyle"
+msgstr "Por defecto"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeDonutStyle"
+msgstr "Rosquilla"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeMediumDonutStyle"
+msgstr "Rosquilla mediana"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeLargeDonutStyle"
+msgstr "Rosquilla grande"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadge1Style"
+msgstr "1"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadge4Style"
+msgstr "4"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeBarStyle"
+msgstr "Barra"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeMediumBarStyle"
+msgstr "Barra mediana"
+
+msgid "plugins.generic.badges.manager.settings.altmetricBadgeLargeBarStyle"
+msgstr "Barra grande"
+
 msgid "plugins.generic.badges.manager.settings.showBlockTitle"
 msgstr "Métrica"
