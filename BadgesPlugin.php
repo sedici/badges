@@ -102,9 +102,10 @@ class BadgesPlugin extends GenericPlugin
 
         $badgesShowDimensions = $this->getSetting($context->getId(), 'badgesShowDimensions');
         $badgesDimensionsHideWhenEmpty = $this->getSetting($context->getId(), 'badgesDimensionsHideWhenEmpty');
+        $badgesDimensionsStyle = $this->getSetting($context->getId(), 'badgesDimensionsStyle');
         $badgesShowAltmetric = $this->getSetting($context->getId(), 'badgesShowAltmetric');
-        $badgesAltmetricStyle = $this->getSetting($context->getId(), 'badgesAltmetricStyle');
         $badgesAltmetricHideWhenEmpty = $this->getSetting($context->getId(), 'badgesAltmetricHideWhenEmpty');
+        $badgesAltmetricStyle = $this->getSetting($context->getId(), 'badgesAltmetricStyle');
         $badgesShowPlumx = $this->getSetting($context->getId(), 'badgesShowPlumx');
         $badgesPlumxHideWhenEmpty = $this->getSetting($context->getId(), 'badgesPlumxHideWhenEmpty');
 
@@ -114,12 +115,13 @@ class BadgesPlugin extends GenericPlugin
         }
         if ($badgesShowAltmetric == 'on') {
             $smarty->assign('showAltmetric', 'true');
-            $smarty->assign('badgesAltmetricStyle', $badgesAltmetricStyle ?? 'donut');
             $smarty->assign('badgesAltmetricHideWhenEmpty', (($badgesAltmetricHideWhenEmpty == 'on') ? 'true' : 'false'));
+            $smarty->assign('badgesAltmetricStyle', $badgesAltmetricStyle ?? 'donut');
         }
         if ($badgesShowPlumx == 'on') {
             $smarty->assign('showPlumx', 'true');
             $smarty->assign('badgesPlumxHideWhenEmpty', (($badgesPlumxHideWhenEmpty == 'on') ? 'true' : 'false'));
+            $smarty->assign('badgesDimensionsStyle', $badgesDimensionsStyle ?? 'small_circle');
         }
         $output .= $smarty->fetch($this->getTemplateResource('badges.tpl'));
         return false;

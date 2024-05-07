@@ -16,7 +16,7 @@
 
         {if $showDimensions}
         <div class="sub_item">
-            <span class="__dimensions_badge_embed__" data-doi="{$doi|escape}" data-hide-zero-citations="{$badgesDimensionsHideWhenEmpty|escape}" data-style="small_circle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+            <span class="__dimensions_badge_embed__" data-doi="{$doi|escape}" data-hide-zero-citations="{$badgesDimensionsHideWhenEmpty|escape}" data-style="{$badgesDimensionsStyle|escape}"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
         </div>
         {/if}
 

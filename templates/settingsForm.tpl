@@ -46,8 +46,8 @@
         <h3>{translate key="plugins.generic.badges.manager.settings.dimensionsBadgeStyle"}</h3>
 
         {fbvFormSection list=true}
-            {fbvElement type="radio" value="small_circle" id="badgesDimensionsStyle-small_circle" name="badgesDimensionsStyle" checked=$badgesDimensionsStyle|compare:"small_circle" label="plugins.generic.badges.manager.settings.dimensionsBadgeSmallCircleStyle"}
-            {fbvElement type="radio" value="medium_circle" id="badgesDimensionsStyle-medium_circle" name="badgesDimensionsStyle" checked=in_array($badgesDimensionsStyle, ["medium_circle", ""]) label="plugins.generic.badges.manager.settings.dimensionsBadgeMediumCircleStyle"}
+            {fbvElement type="radio" value="small_circle" id="badgesDimensionsStyle-small_circle" name="badgesDimensionsStyle" checked=in_array($badgesDimensionsStyle, ["small_circle", ""]) label="plugins.generic.badges.manager.settings.dimensionsBadgeSmallCircleStyle"}
+            {fbvElement type="radio" value="medium_circle" id="badgesDimensionsStyle-medium_circle" name="badgesDimensionsStyle" checked=$badgesDimensionsStyle|compare:"medium_circle" label="plugins.generic.badges.manager.settings.dimensionsBadgeMediumCircleStyle"}
             {fbvElement type="radio" value="large_circle" id="badgesDimensionsStyle-large_circle" name="badgesDimensionsStyle" checked=$badgesDimensionsStyle|compare:"large_circle" label="plugins.generic.badges.manager.settings.dimensionsBadgeLargeCircleStyle"}
             {fbvElement type="radio" value="small_rectangle" id="badgesDimensionsStyle-small_rectangle" name="badgesDimensionsStyle" checked=$badgesDimensionsStyle|compare:"small_rectangle" label="plugins.generic.badges.manager.settings.dimensionsBadgeSmallRectangleStyle"}
             {fbvElement type="radio" value="large_rectangle" id="badgesDimensionsStyle-large_rectangle" name="badgesDimensionsStyle" checked=$badgesDimensionsStyle|compare:"large_rectangle" label="plugins.generic.badges.manager.settings.dimensionsBadgeLargeRectangleStyle"}
