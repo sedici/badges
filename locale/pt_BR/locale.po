@@ -43,13 +43,31 @@ msgstr "Oculte badge de PlumX se não houver métricas"
 msgid "plugins.generic.badges.manager.settings.showPlumx"
 msgstr "Mostrar badge PlumX"
 
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeStyle"
+msgstr "Estilo de badge Dimensions"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeSmallCircleStyle"
+msgstr "Círculo pequeno"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeMediumCircleStyle"
+msgstr "Círculo médio"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeLargeCircleStyle"
+msgstr "Círculo grande"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeSmallRectangleStyle"
+msgstr "Retângulo pequeno"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeLargeRectangleStyle"
+msgstr "Retângulo grande"
+
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyle"
 msgstr "Estilo de badge Altmetric"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyleDetails"
 msgstr ""
 "Veja <a target=\"_new\" href=\"https://badge-docs.altmetric.com/"
-"customizations.html#badge-types\">Badge types</a> para detalhes."
+"customizations.html#badge-types\">Tipos de badge</a> para detalhes."
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeDefaultStyle"
 msgstr "Padrão"

@@ -43,6 +43,24 @@ msgstr "Hide PlumX badge when there are no mentions"
 msgid "plugins.generic.badges.manager.settings.showPlumx"
 msgstr "Show PlumX badge"
 
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeStyle"
+msgstr "Dimensions badge style"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeSmallCircleStyle"
+msgstr "Small circle"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeMediumCircleStyle"
+msgstr "Medium circle"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeLargeCircleStyle"
+msgstr "Large circle"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeSmallRectangleStyle"
+msgstr "Small rectangle"
+
+msgid "plugins.generic.badges.manager.settings.dimensionsBadgeLargeRectangleStyle"
+msgstr "Large rectangle"
+
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyle"
 msgstr "Altmetric badge style"
 
