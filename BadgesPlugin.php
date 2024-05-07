@@ -112,6 +112,7 @@ class BadgesPlugin extends GenericPlugin
         if ($badgesShowDimensions == 'on') {
             $smarty->assign('showDimensions', 'true');
             $smarty->assign('badgesDimensionsHideWhenEmpty', (($badgesDimensionsHideWhenEmpty == 'on') ? 'true' : 'false'));
+            $smarty->assign('badgesDimensionsStyle', $badgesDimensionsStyle ?? 'small_circle');
         }
         if ($badgesShowAltmetric == 'on') {
             $smarty->assign('showAltmetric', 'true');
@@ -121,11 +122,9 @@ class BadgesPlugin extends GenericPlugin
         if ($badgesShowPlumx == 'on') {
             $smarty->assign('showPlumx', 'true');
             $smarty->assign('badgesPlumxHideWhenEmpty', (($badgesPlumxHideWhenEmpty == 'on') ? 'true' : 'false'));
-            $smarty->assign('badgesDimensionsStyle', $badgesDimensionsStyle ?? 'small_circle');
         }
         $output .= $smarty->fetch($this->getTemplateResource('badges.tpl'));
         return false;
-
     }
 
     /**
