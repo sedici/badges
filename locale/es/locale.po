@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-02T11:05:06+00:00\n"
-"PO-Revision-Date: 2022-05-02 11:19-0300\n"
+"PO-Revision-Date: 2022-05-02 11:11-0300\n"
 "Last-Translator: Gonzalo Villarreal <gonzalo@prebi.unlp.edu.ar>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/plugins/badges>\n"
-"Language: Portuguese (Brazil)\n"
+"Language: Español\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,72 +14,72 @@ msgstr ""
 "X-Generator: Poedit 2.3\n"
 
 msgid "plugins.generic.badges.displayName"
-msgstr "Plugin de marcas de altmetrics (Badges)"
+msgstr "Módulo de Badges de Altmetrics"
 
 msgid "plugins.generic.badges.description"
-msgstr "Incorpora marcas com altmétricas na página de artigos"
+msgstr "Incorpora marcas con altmétricas en la página de los artículos"
 
 msgid "plugins.generic.badges.manager.settings.description"
-msgstr "Incorpora marcas com altmétricas na página de artigos"
+msgstr "Permite mostrar los sellos (badges) con altmetrics de Dimensions, Altmetric.com y PlumX Analytics"
 
 msgid "plugins.generic.badges.settings"
-msgstr "Opções do módulo"
+msgstr "Ajustes"
 
 msgid "plugins.generic.badges.manager.settings.showDimensions"
-msgstr "Mostrar badge Dimensions.ai"
+msgstr "Mostrar el badge de Dimensions"
 
 msgid "plugins.generic.badges.manager.settings.showAltmetric"
-msgstr "Mostrar badge Altmetric.com"
+msgstr "Mostrar el badge de Altmetric"
 
 msgid "plugins.generic.badges.manager.settings.dimensionsHideWhenEmpty"
-msgstr "Oculte badge de Dimensions se não houver métricas"
+msgstr "Ocultar el badge de Dimensions si no hay datos para mostrar"
 
 msgid "plugins.generic.badges.manager.settings.altmetricHideWhenEmpty"
-msgstr "Oculte badge de Altmetric.com se não houver métricas"
+msgstr "Ocultar el badge de Altmetric si no hay datos para mostrar"
 
 msgid "plugins.generic.badges.manager.settings.plumxHideWhenEmpty"
-msgstr "Oculte badge de PlumX se não houver métricas"
+msgstr "Ocultar el badge de PlumX si no hay datos para mostrar"
 
 msgid "plugins.generic.badges.manager.settings.showPlumx"
-msgstr "Mostrar badge PlumX"
+msgstr "Mostrar el badge de PlumX Analytics"
 
 msgid "plugins.generic.badges.manager.settings.dimensionsBadgeStyle"
 msgstr "Estilo de badge Dimensions"
 
 msgid "plugins.generic.badges.manager.settings.dimensionsBadgeSmallCircleStyle"
-msgstr "Círculo pequeno"
+msgstr "Círculo pequeño"
 
 msgid "plugins.generic.badges.manager.settings.dimensionsBadgeMediumCircleStyle"
-msgstr "Círculo médio"
+msgstr "Círculo mediano"
 
 msgid "plugins.generic.badges.manager.settings.dimensionsBadgeLargeCircleStyle"
 msgstr "Círculo grande"
 
 msgid "plugins.generic.badges.manager.settings.dimensionsBadgeSmallRectangleStyle"
-msgstr "Retângulo pequeno"
+msgstr "Rectángulo pequeño"
 
 msgid "plugins.generic.badges.manager.settings.dimensionsBadgeLargeRectangleStyle"
-msgstr "Retângulo grande"
+msgstr "Rectángulo grande"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyle"
 msgstr "Estilo de badge Altmetric"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeStyleDetails"
 msgstr ""
-"Veja <a target=\"_new\" href=\"https://badge-docs.altmetric.com/"
-"customizations.html#badge-types\">Tipos de badge</a> para detalhes."
+"Véase <a target=\"_new\" href=\"https://badge-docs.altmetric.com/"
+"customizations.html#badge-types\">Tipos de badge</a> para detalles."
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeDefaultStyle"
-msgstr "Padrão"
+msgstr "Por defecto"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeDonutStyle"
-msgstr "Rosquinha"
+msgstr "Rosquilla"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeMediumDonutStyle"
-msgstr "Rosquinha média"
+msgstr "Rosquilla mediana"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeLargeDonutStyle"
-msgstr "Rosquinha grande"
+msgstr "Rosquilla grande"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadge1Style"
 msgstr "1"
@@ -91,10 +91,10 @@ msgid "plugins.generic.badges.manager.settings.altmetricBadgeBarStyle"
 msgstr "Barra"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeMediumBarStyle"
-msgstr "Barra média"
+msgstr "Barra mediana"
 
 msgid "plugins.generic.badges.manager.settings.altmetricBadgeLargeBarStyle"
 msgstr "Barra grande"
 
 msgid "plugins.generic.badges.manager.settings.showBlockTitle"
-msgstr "Métricas"
+msgstr "Métrica"
